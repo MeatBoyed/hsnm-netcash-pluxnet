@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     NETCASH_SERVICE_KEY: str
     NETCASH_SOFTWARE_VENDOR_KEY: str
 
-    model_config = SettingsConfigDict(env_file="../.env", extra="ignore")
+    model_config = SettingsConfigDict(env_file="./.env", extra="ignore")
 
 
 Config = Settings()

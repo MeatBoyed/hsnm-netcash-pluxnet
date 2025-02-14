@@ -24,7 +24,7 @@ def extract_payment_url(response_xml: str) -> str:
                     if name is not None and name.text == "Url":
                         return value.text
 
-    except ET.ParseError:
-        print("Error parsing XML response")
+    except ET.ParseError as error:
+        print("Error parsing XML response", error)
 
     return ""  # Return empty string if no URL is found
